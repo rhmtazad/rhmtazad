@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @rhmtazad
-- 👀 I’m interested in software engineering, AI, photograhy, graphic design, and arts.
-- 🌱 I’m currently learning how to create my own artificial general intelligence.
-- 💞️ I’m looking to collaborate on topics related to machine learning.
+- 🧠 I’m interested in software engineering, AI, photograhy, graphic design, and arts.
+- 📚 I’m currently learning how to create my own AGI.
+- 💻 I’m looking to collaborate on topics related to machine learning.
 - 📫 You can reach me through rhmtazad@gmail.com
