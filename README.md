@@ -25,9 +25,16 @@
 ### 📜 Verified Credentials
 ## Certifications & Badges
 
+### 📜 Verified Credentials
+## Certifications & Badges
+
+[![Google Cybersecurity](https://shields.io)](https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2)
+
+[![Google IT Support](https://shields.io)](https://www.credly.com/badges/58d74682-616e-4aef-be32-36e66150aec7)
+
+[![IBM Data Engineering](https://shields.io)](https://www.credly.com/badges/6ed04358-db82-4a12-a7ed-fbdcee5bb6fd)
+
+[![IBM Python](https://shields.io)](https://www.credly.com/badges/e60e8e95-980a-46ae-9fc5-ed9c8fee80de)
+
 <!--START_SECTION:badges-->
-[![Google Cybersecurity Professional](https://shields.io)](https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2/public_url)
-[![Google IT Support Professional](https://shields.io)](https://www.credly.com/badges/58d74682-616e-4aef-be32-36e66150aec7/public_url)
-[![IBM Data Engineering](https://shields.io)](https://www.credly.com/badges/6ed04358-db82-4a12-a7ed-fbdcee5bb6fd/public_url)
-[![IBM Python for Data Science, AI & Development](https://shields.io)](https://www.credly.com/badges/e60e8e95-980a-46ae-9fc5-ed9c8fee80de/public_url)
 <!--END_SECTION:badges-->
