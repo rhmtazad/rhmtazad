@@ -84,34 +84,20 @@ const rahmatAzad = {
 ### 📜 Verified Professional Certifications
 *Secure identity verification framework. Click on individual panels to review institutional ledgers.*
 
-<table>
-  <tr>
-    <td align="center" width="25%">
-      <a href="https://credly.com" target="_blank">
-        <img src="https://credly.com" width="125" alt="Google Cybersecurity" />
-        <br /><sub><b>Google Cybersecurity</b></sub>
-      </a>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://credly.com" target="_blank">
-        <img src="https://credly.com" width="125" alt="IBM Python Data Science" />
-        <br /><sub><b>Python for Data Science</b></sub>
-      </a>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://credly.com" target="_blank">
-        <img src="https://credly.com" width="125" alt="IBM Data Engineering" />
-        <br /><sub><b>IBM Data Engineering <br/> (Candidate)</b></sub>
-      </a>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://credly.com" target="_blank">
-        <img src="https://credly.com" width="125" alt="Google IT Support" />
-        <br /><sub><b>Google IT Support</b></sub>
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://credly.com" target="_blank">
+    <img src="https://credly.com" width="160" height="160" alt="Google Cybersecurity" style="margin: 10px;" />
+  </a>
+  <a href="[https://credly.com](https://www.credly.com/badges/e60e8e95-980a-46ae-9fc5-ed9c8fee80de/public_url)" target="_blank">
+    <img src="https://credly.com" width="160" height="160" alt="IBM Python Data Science" style="margin: 10px;" />
+  </a>
+  <a href="https://credly.com" target="_blank">
+    <img src="https://credly.com" width="160" height="160" alt="IBM Data Engineering" style="margin: 10px;" />
+  </a>
+  <a href="https://credly.com" target="_blank">
+    <img src="https://credly.com" width="160" height="160" alt="Google IT Support" style="margin: 10px;" />
+  </a>
+</p>
 
 <br />
 
