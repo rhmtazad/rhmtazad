@@ -1,0 +1,20 @@
+name: Update Credly Badges
+on:
+  schedule:
+    - cron: "0 2 * * *" # Runs daily at 2 AM UTC
+  workflow_dispatch: # Allows you to run it manually
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Badges - Readme
+        uses: pemtajo/badge-readme@main
+        with:
+          CREDLY_USER: https://www.credly.com/users/rhmtazad
