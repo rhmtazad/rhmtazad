@@ -1,7 +1,6 @@
 ## 👋 Hi, I'm Rahmat Azad! 
 
-![Cover](./cover.png)
-
+<img src="https://github.com/rhmtazad/rhmtazad/blob/e62105368873d644f8aa424902edcced21768e9a/cover.png" width="100%" alt="Profile Banner">
 
 ### 🚀 Full-Stack Software Engineer
 > I engineer autonomous workflows, build secure data backends, and scale modern web apps.
