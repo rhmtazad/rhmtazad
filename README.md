@@ -25,7 +25,7 @@
 ### 📜 Verified Credentials and Certifications
 💻 Full-Stack Software Engineer
 🛡️ Certified Google Cybersecurity & IT Support Professional
-🗄️ IBM Data Engineering (Candidate) Professional
+🗄️ IBM Data Engineering Professional (Candidate) 
 
 <!--START_SECTION:badges-->
 [![Google Cybersecurity Professional Certificate(v.2)](https://images.credly.com/size/80x80/images/ef9f86ad-4e53-4dbc-8951-e4cab81ff09e/blob)](https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2)
