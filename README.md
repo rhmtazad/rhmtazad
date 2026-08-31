@@ -25,6 +25,7 @@
   
 
 <!--START_SECTION:badges-->
+[![Ancient Greek Philosophers (PHIL1001)](https://images.credly.com/size/80x80/images/2ee6cda8-79f0-476d-bbca-be1477d46999/image.png)](https://www.credly.com/badges/23fb48a9-0f4f-4086-8195-8f50fe6344d6)
 [![Google Cybersecurity Professional Certificate(v.2)](https://images.credly.com/size/80x80/images/ef9f86ad-4e53-4dbc-8951-e4cab81ff09e/blob)](https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2)
 [![Art History I (ARTHIST1001)](https://images.credly.com/size/80x80/images/16e8004a-de12-4fc9-8438-bc8f08da45e7/image.png)](https://www.credly.com/badges/5137df56-e75b-404d-b070-a13d5c5beddd)
 [![Data Engineering Essentials](https://images.credly.com/size/80x80/images/c0b439e5-79d5-498e-abc9-2b71cdf08c34/image.png)](https://www.credly.com/badges/6ed04358-db82-4a12-a7ed-fbdcee5bb6fd)
