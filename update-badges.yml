@@ -1,8 +1,8 @@
 name: Update Credly Badges
 on:
   schedule:
-    - cron: "0 2 * * *" # Runs daily at 2 AM UTC
-  workflow_dispatch: # Allows you to run it manually
+    - cron: "0 2 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -17,4 +17,4 @@ jobs:
       - name: Badges - Readme
         uses: pemtajo/badge-readme@main
         with:
-          CREDLY_USER: https://www.credly.com/users/rhmtazad
+          CREDLY_USER: rhmtazad
