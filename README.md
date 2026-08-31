@@ -1,7 +1,5 @@
 ## 👋 Hi, I'm Rahmat Azad! 
 
-![cover](./cover.png)
-
 ### 🚀 Full-Stack Software Engineer
 > I engineer autonomous workflows, build secure data backends, and scale modern web apps.
 
