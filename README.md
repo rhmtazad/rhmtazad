@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Rahmat Azad! 
+## 👋 Hi, I'm Rahmat Azad! 
 
 ### 🚀 Full-Stack Software Engineer
 > I engineer autonomous workflows, build secure data backends, and scale modern web apps.
@@ -6,26 +6,23 @@
 
 ### 🧠 Core Expertise
 * 💻 **Full-Stack Dev** ━ Building powerful web applications and responsive tools.
-* ⚙️ **Smart Automation** ━ Orchestrating background engines to eliminate repetitive tasks.
+* ⚙️ **Smart Automation** ━ Orchestrating background engines to eliminate repetitive tasks.  
 * 🛡️ **Cybersecurity** ━ Securing application endpoints and protecting user architecture.
 * 📊 **Data Engineering** ━ Designing robust ETL pipelines and structuring databases.
 
 
 ### 💻 Deployments
 
-* 📦 **HydraDB** `PyPI Package`
-  An API wrapper built to minimize SQLite3 boilerplate and accelerate Python data operations.
-  👉 [_Access PyPI Page_](https://pypi.org/project/hydradb/) • [_View Repository_](https://github.com/rhmtazad/hydradb/)
-
-* 🎓 **UniProg** `Academic • Archived`
-  A software application developed for the core Software Engineering curriculum at AUAF.
-  👉 [_View Repository_](https://github.com/rhmtazad/UniProg)
+* 📦 **HydraDB** [_An API wrapper built to minimize SQLite3 boilerplate and accelerate Python data operations._](https://pypi.org/project/hydradb/)
+* 🎓 **UniProg** [_A software application developed for the core Software Engineering curriculum at AUAF._](https://github.com/rhmtazad/UniProg)
 
 
 ### 📜 Verified Credentials and Certifications
-* 🛡️ **Google** Certified Cybersecurity Professional  
-* 💻 **Google** Certified IT Support Professional 
-* 🗄️ **IBM** Data Engineering Professional (Candidate) 
+* 🛡️ **Google** Certified Cybersecurity Professional
+* 💻 **Google** Certified IT Support Professional
+* 🗄️ **IBM** Data Engineering Professional (Candidate)
+
+  
 
 <!--START_SECTION:badges-->
 [![Google Cybersecurity Professional Certificate(v.2)](https://images.credly.com/size/80x80/images/ef9f86ad-4e53-4dbc-8951-e4cab81ff09e/blob)](https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2)
