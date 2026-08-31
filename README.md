@@ -23,8 +23,8 @@
 
 
 ### 📜 Verified Credentials and Certifications
-💻 Full-Stack Software Engineer
-🛡️ Certified Google Cybersecurity & IT Support Professional
+💻 Full-Stack Software Engineer  
+🛡️ Certified Google Cybersecurity & IT Support Professional  
 🗄️ IBM Data Engineering Professional (Candidate) 
 
 <!--START_SECTION:badges-->
