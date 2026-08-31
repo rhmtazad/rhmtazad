@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Rahmat Azad! 
 
-### 🚀 Full-Stack Software Engineer & Smart Automation Specialist
+### 🚀 Full-Stack Software Engineer
 > I engineer autonomous workflows, build secure data backends, and scale modern web apps.
 
 
@@ -11,7 +11,7 @@
 * 📊 **Data Engineering** ━ Designing robust ETL pipelines and structuring databases.
 
 
-### 💻 Select Deployments
+### 💻 Deployments
 
 * 📦 **HydraDB** `PyPI Package`
   An API wrapper built to minimize SQLite3 boilerplate and accelerate Python data operations.
@@ -22,19 +22,10 @@
   👉 [_View Repository_](https://github.com/rhmtazad/UniProg)
 
 
-### 📜 Verified Credentials
-## Certifications & Badges
-
-### 📜 Verified Credentials
-## Certifications & Badges
-
-[![Google Cybersecurity](https://shields.io)](https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2)
-
-[![Google IT Support](https://shields.io)](https://www.credly.com/badges/58d74682-616e-4aef-be32-36e66150aec7)
-
-[![IBM Data Engineering](https://shields.io)](https://www.credly.com/badges/6ed04358-db82-4a12-a7ed-fbdcee5bb6fd)
-
-[![IBM Python](https://shields.io)](https://www.credly.com/badges/e60e8e95-980a-46ae-9fc5-ed9c8fee80de)
+### 📜 Verified Credentials and Certifications
+💻 Full-Stack Software Engineer
+🛡️ Certified Google Cybersecurity & IT Support Professional
+🗄️ IBM Data Engineering (Candidate) Professional
 
 <!--START_SECTION:badges-->
 [![Google Cybersecurity Professional Certificate(v.2)](https://images.credly.com/size/80x80/images/ef9f86ad-4e53-4dbc-8951-e4cab81ff09e/blob)](https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2)
