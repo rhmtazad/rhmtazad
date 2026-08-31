@@ -32,3 +32,4 @@ jobs:
         uses: pemtajo/badge-readme@main
         with:
           CREDLY_USER: rhmtazad
+          CREDLY_SIZE: 600x600
