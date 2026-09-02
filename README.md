@@ -1,26 +1,29 @@
-## 👋 Hi, I'm Rahmat Azad! 
+<p align="center">
+  <img src="./assets/hero.png" alt="Software Engineering · DevOps · Automation">
+</p>
 
-### 🚀 Full-Stack Software Engineer
-> I engineer autonomous workflows, build secure data backends, and scale modern web apps.
+## About
 
+Building toward expertise in software engineering, DevOps, cloud infrastructure, and automation.
 
-### 🧠 Core Expertise
-* 💻 **Full-Stack Dev** ━ Building powerful web applications and responsive tools.
-* ⚙️ **Smart Automation** ━ Orchestrating background engines to eliminate repetitive tasks.  
-* 🛡️ **Cybersecurity** ━ Securing application endpoints and protecting user architecture.
-* 📊 **Data Engineering** ━ Designing robust ETL pipelines and structuring databases.
+I enjoy understanding how systems work from the code level through deployment and infrastructure—and finding ways to make them more reliable, scalable, and automated.
 
+## Currently Exploring
 
-### 💻 Deployments
+`Python` · `Linux` · `Git` · `CI/CD` · `Cloud` · `Containers` · `Infrastructure as Code`
+
+## Projects
+
+Projects focused on software engineering, automation, infrastructure, and practical experimentation.
 
 * 📦 **HydraDB** [_An API wrapper built to minimize SQLite3 boilerplate and accelerate Python data operations._](https://pypi.org/project/hydradb/)
 * 🎓 **UniProg** [_A software application developed for the core Software Engineering curriculum at AUAF._](https://github.com/rhmtazad/UniProg)
 
 
-### 📜 Verified Credentials and Certifications
-* 🛡️ **Google** Certified Cybersecurity Professional
-* 💻 **Google** Certified IT Support Professional
-* 🗄️ **IBM** Data Engineering Professional (Candidate)
+## 📜 Verified Credentials and Certifications
+* 🛡️ **Google** Cybersecurity Professional
+* 💻 **Google** IT Support Professional
+* 🗄️ **IBM** Python for Data Science and AI
 
   
 
