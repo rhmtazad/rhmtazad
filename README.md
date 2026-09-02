@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/engineering.png" alt="Software Engineering · DevOps · Automation">
+  <img src="./assets/hero.png" alt="Software Engineering · DevOps · Automation">
 </p>
 
 ## 👤 About
