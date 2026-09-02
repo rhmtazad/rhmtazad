@@ -10,9 +10,6 @@ permissions:
 
 jobs:
   update-readme:
-    # Prevent the workflow from triggering itself after its own commit
-    if: github.actor != 'github-actions[bot]'
-
     runs-on: ubuntu-latest
 
     steps:
@@ -23,62 +20,3 @@ jobs:
         uses: pemtajo/badge-readme@main
         with:
           CREDLY_USER: rhmtazad
-
-      - name: Improve Badge Quality
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-
-          path = Path("README.md")
-          text = path.read_text(encoding="utf-8")
-
-          start_marker = "<!--START_SECTION:badges-->"
-          end_marker = "<!--END_SECTION:badges-->"
-
-          if start_marker not in text or end_marker not in text:
-              raise SystemExit("Credly badge section not found.")
-
-          before, rest = text.split(start_marker, 1)
-          badges, after = rest.split(end_marker, 1)
-
-          badges = badges.replace(
-              "https://images.credly.com/size/80x80/",
-              "https://images.credly.com/"
-          )
-
-          badges = re.sub(
-              r'width="80"',
-              'width="100"',
-              badges
-          )
-
-          badges = re.sub(
-              r'height="80"',
-              'height="100"',
-              badges
-          )
-
-          path.write_text(
-              before
-              + start_marker
-              + badges
-              + end_marker
-              + after,
-              encoding="utf-8"
-          )
-          PY
-
-      - name: Commit Changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add README.md
-
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Update Credly badges"
-            git push
-          fi
