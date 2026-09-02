@@ -10,22 +10,21 @@ permissions:
 
 jobs:
   update-readme:
+    # Prevent the workflow from triggering itself after its own commit
+    if: github.actor != 'github-actions[bot]'
+
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Generate the Credly badge section
       - name: Badges - Readme
         uses: pemtajo/badge-readme@main
         with:
           CREDLY_USER: rhmtazad
 
-      # Replace Credly's low-resolution 80x80 images
-      # with the original image URLs and control the display size.
       - name: Improve Badge Quality
-        shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
@@ -43,13 +42,11 @@ jobs:
           before, rest = text.split(start_marker, 1)
           badges, after = rest.split(end_marker, 1)
 
-          # Remove Credly's 80x80 thumbnail path.
           badges = badges.replace(
               "https://images.credly.com/size/80x80/",
               "https://images.credly.com/"
           )
 
-          # Increase the displayed badge size.
           badges = re.sub(
               r'width="80"',
               'width="100"',
@@ -72,7 +69,6 @@ jobs:
           )
           PY
 
-      # Commit only if README actually changed
       - name: Commit Changes
         run: |
           git config user.name "github-actions[bot]"
