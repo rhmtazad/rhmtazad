@@ -8,10 +8,6 @@ Building toward expertise in software engineering, DevOps, cloud infrastructure,
 
 I enjoy understanding how systems work from the code level through deployment and infrastructure—and finding ways to make them more reliable, scalable, and automated.
 
-## Currently Exploring
-
-`Python` · `Linux` · `Git` · `CI/CD` · `Cloud` · `Containers` · `Infrastructure as Code`
-
 ## Projects
 
 Projects focused on software engineering, automation, infrastructure, and practical experimentation.
