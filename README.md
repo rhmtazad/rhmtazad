@@ -2,13 +2,13 @@
   <img src="./assets/engineering.png" alt="Software Engineering · DevOps · Automation">
 </p>
 
-## About
+## 👤 About
 
 Building toward expertise in software engineering, DevOps, cloud infrastructure, and automation.
 
 I enjoy understanding how systems work from the code level through deployment and infrastructure—and finding ways to make them more reliable, scalable, and automated.
 
-## Projects
+## 📁 Projects
 
 Projects focused on software engineering, automation, infrastructure, and practical experimentation.
 
