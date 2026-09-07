@@ -64,6 +64,21 @@ A GUI tool for students to manage degree plans and courses, developed as a Softw
 - 🐍 IBM Python for Data Science, AI & Development  
 
 <!--START_SECTION:badges-->
+[![Google Data Analytics Professional Certificate(v.3)](https://images.credly.com/size/80x80/images/d4185c81-d7ad-4220-bf32-46168be588bc/blob)](https://www.credly.com/badges/9b4d1e5c-be53-44e2-a1cd-c312502693ca)
+[![Google IT Automation with Python Professional Certificate(v.1)](https://images.credly.com/size/80x80/images/1a546b64-d2d1-480a-9144-410112eb8fa0/blob)](https://www.credly.com/badges/fbec0f71-57c2-4800-8391-14a8465cb4fc)
+[![Introduction to Ethics (PHIL1002)](https://images.credly.com/size/80x80/images/5c4e1fd0-c40b-4758-aaab-5c4dc0b9964b/blob)](https://www.credly.com/badges/78875b8c-5d6d-4fff-95cd-c5ee1affca53)
+[![Approaches to Studying Religions (REL1001)](https://images.credly.com/size/80x80/images/8c24a819-5832-4321-ad86-a0b2ae2f1216/image.png)](https://www.credly.com/badges/e83242b4-c863-482c-a9e3-aa557795d781)
+[![Google AI for App Building](https://images.credly.com/size/80x80/images/25770df5-6488-4ce1-b4a4-60378a51d739/blob)](https://www.credly.com/badges/eab6d303-9fa3-48b4-86e6-39644cbbd07f)
+[![Google AI for App Deployment](https://images.credly.com/size/80x80/images/09b04f50-3ae9-49e2-afa9-1521ac742df3/blob)](https://www.credly.com/badges/456c4f54-bb65-4ef7-8eb8-fc744f129033)
+[![Google AI for Brainstorming and Planning](https://images.credly.com/size/80x80/images/a1bec460-6545-4b61-9dd2-e56b7d6ccf63/blob)](https://www.credly.com/badges/9eccb7d6-7e21-4c05-8f42-8dd105daa1bf)
+[![Google AI for Content Creation](https://images.credly.com/size/80x80/images/14f51379-d8b0-49ea-b1d0-f97039ff27b8/blob)](https://www.credly.com/badges/145feedf-8d5e-45fe-bad6-c0662645beb1)
+[![Google AI for Data Analysis](https://images.credly.com/size/80x80/images/34ac978e-748e-4e7e-9227-34e0746716c8/blob)](https://www.credly.com/badges/f3c19ffe-613d-4ab2-8786-5ca9eaa4d6f3)
+[![Google AI for Research and Insights](https://images.credly.com/size/80x80/images/2f5411ce-c54c-4ddb-83ec-bdd3b28dd2a4/blob)](https://www.credly.com/badges/0baeb562-64fc-4a52-a71e-643d2aca0ce1)
+[![Google AI for Writing and Communicating](https://images.credly.com/size/80x80/images/18687a40-458e-44fc-b539-db34d92de0d4/blob)](https://www.credly.com/badges/69af0782-b6cc-40fa-8f41-20b311877909)
+[![Google AI Fundamentals](https://images.credly.com/size/80x80/images/d6521452-e64b-4f96-bc20-4758b720757b/blob)](https://www.credly.com/badges/1bc0a4bc-788b-4e6b-a212-7d83c4d42259)
+[![Google UX Design Professional Certificate(v.3)](https://images.credly.com/size/80x80/images/cba75f2c-9c81-48c0-b7cd-70c61c1a815e/blob)](https://www.credly.com/badges/e0e153c1-92ad-4643-8af2-414fb92736f2)
+[![English Composition I (ENG1001)](https://images.credly.com/size/80x80/images/70b118fc-ca7f-4513-b55f-54ee93214edf/image.png)](https://www.credly.com/badges/ce35cdb8-65bc-4eeb-b3d9-59eb8edf6c07)
+[![Introduction to Psychology (PSYC1010)](https://images.credly.com/size/80x80/images/f109a6f9-da36-4cc4-b0be-22946b135050/image.png)](https://www.credly.com/badges/0ea84f38-4975-4361-9e95-189201de7aa3)
 [![Ancient Greek Philosophers (PHIL1001)](https://images.credly.com/size/80x80/images/2ee6cda8-79f0-476d-bbca-be1477d46999/image.png)](https://www.credly.com/badges/23fb48a9-0f4f-4086-8195-8f50fe6344d6)
 [![Google Cybersecurity Professional Certificate(v.2)](https://images.credly.com/size/80x80/images/ef9f86ad-4e53-4dbc-8951-e4cab81ff09e/blob)](https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2)
 [![Art History I (ARTHIST1001)](https://images.credly.com/size/80x80/images/16e8004a-de12-4fc9-8438-bc8f08da45e7/image.png)](https://www.credly.com/badges/5137df56-e75b-404d-b070-a13d5c5beddd)
