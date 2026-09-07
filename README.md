@@ -4,9 +4,7 @@
 
 ## 👤 About
 
-Building toward expertise in software engineering, DevOps, cloud infrastructure, and automation.
-
-I enjoy understanding systems from code to deployment—and finding ways to make them more reliable, scalable, and automated.
+Focused on software engineering and DevOps, with an interest in automation, cloud technologies, and building reliable software. I enjoy exploring areas like Linux, networking, cybersecurity, and data systems while continuously learning and growing my skills.
 
 ## 🔭 Currently Exploring
 
@@ -54,11 +52,16 @@ A GUI tool for students to manage degree plans and courses, developed as a Softw
   <img src="./assets/uniprog.PNG" alt="UniProg Software Dashboard">
 </p>
 
-## 📜 Credentials
+## 🎓 Credentials
+
+### Google
 
 - 🛡️ Google Cybersecurity Professional Certificate
 - 💻 Google IT Support Professional Certificate
-- 🗄️ IBM Python for Data Science and AI
+- 📊 Google Data Analytics Professional Certificate
+- 🎨 Google UX Design Professional Certificate
+- 🐍 Google IT Automation with Python Professional Certificate
+- 🐍 IBM Python for Data Science, AI & Development  
 
 <!--START_SECTION:badges-->
 [![Ancient Greek Philosophers (PHIL1001)](https://images.credly.com/size/80x80/images/2ee6cda8-79f0-476d-bbca-be1477d46999/image.png)](https://www.credly.com/badges/23fb48a9-0f4f-4086-8195-8f50fe6344d6)
