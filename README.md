@@ -4,7 +4,7 @@
 
 ## 👤 About
 
-I am focused on software engineering and DevOps, with an interest in automation, cloud technologies, and building reliable software. I enjoy exploring areas like Linux, networking, cybersecurity, and data systems while continuously learning and growing my skills.
+I build software, automate infrastructure, and solve technical problems.
 
 ## 🔭 Currently Exploring
 
