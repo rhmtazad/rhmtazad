@@ -4,7 +4,7 @@
 
 ## 👤 About
 
-Focused on software engineering and DevOps, with an interest in automation, cloud technologies, and building reliable software. I enjoy exploring areas like Linux, networking, cybersecurity, and data systems while continuously learning and growing my skills.
+I am focused on software engineering and DevOps, with an interest in automation, cloud technologies, and building reliable software. I enjoy exploring areas like Linux, networking, cybersecurity, and data systems while continuously learning and growing my skills.
 
 ## 🔭 Currently Exploring
 
@@ -53,8 +53,6 @@ A GUI tool for students to manage degree plans and courses, developed as a Softw
 </p>
 
 ## 🎓 Credentials
-
-### Google
 
 - 🛡️ Google Cybersecurity Professional Certificate
 - 💻 Google IT Support Professional Certificate
