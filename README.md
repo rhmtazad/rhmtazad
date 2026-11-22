@@ -1,65 +1,10 @@
-<p align="center">
-  <img src="./assets/hero.png" alt="Software Engineering · DevOps · Automation">
-</p>
+# Rahmat Azad
 
-## 👤 About
+**Software engineering & DevOps**
 
-I build software, automate infrastructure, and solve technical problems.
+I build Python tools and automate infrastructure. I’m currently exploring how to deploy and secure Linux systems in the cloud.
 
-## 🔭 Currently Exploring
-
-- ☁️ Cloud Infrastructure
-- ⚙️ DevOps & Automation
-- 🐧 Linux & System Administration
-- 🔐 Cybersecurity
-- 🐍 Python & Software engineering
-
-## 📁 Projects
-
-### HydraDB
-
-[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![PyPI](https://img.shields.io/pypi/v/hydradb?logo=pypi&logoColor=white)](https://pypi.org/project/hydradb/)
-[![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
-
-A lightweight Python API that simplifies common SQLite database operations.
-
-#### Installation
-
-```bash
-pip install hydradb
-```
-
-#### Usage
-
-```python
-from hydra import Schema
-
-db = Schema("myDB")
-
-db.execute("SELECT * FROM students")
-```
-
-### UniProg
-
-[![Software Engineering](https://img.shields.io/badge/Software_Engineering-Scrum_Project-important)](https://github.com/rhmtazad/UniProg/)
-[![Made with Python](https://img.shields.io/badge/Python<=3.7-blue?logo=python&logoColor=white)](https://python.org)
-[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-A GUI tool for students to manage degree plans and courses, developed as a Software Engineering project using Agile and Scrum.
-
-<p align="center">
-  <img src="./assets/uniprog.PNG" alt="UniProg Software Dashboard">
-</p>
-
-## 🎓 Credentials
-
-- 🛡️ Google Cybersecurity Professional Certificate
-- 💻 Google IT Support Professional Certificate
-- 📊 Google Data Analytics Professional Certificate
-- 🎨 Google UX Design Professional Certificate
-- 🐍 Google IT Automation with Python Professional Certificate
-- 🐍 IBM Python for Data Science, AI & Development  
+## Credentials
 
 <!--START_SECTION:badges-->
 
@@ -122,3 +67,32 @@ A GUI tool for students to manage degree plans and courses, developed as a Softw
 </details>
 
 <!--END_SECTION:badges-->
+
+[View my Credly profile →](https://www.credly.com/users/rhmtazad)
+
+## Selected projects
+
+### [HydraDB](https://github.com/rhmtazad/hydraDB)
+
+HydraDB turns everyday SQLite operations into Python method calls. A single `Schema` object can create tables, change columns, and return query results as dictionaries. [Package on PyPI](https://pypi.org/project/hydradb/)
+
+<details>
+<summary>Try HydraDB</summary>
+
+```bash
+python -m pip install hydradb
+```
+
+```python
+from hydra import Schema
+
+db = Schema("portfolio")
+db.add_table("projects")
+print(db.fetch_column_names("projects"))  # ['projects_id']
+```
+
+</details>
+
+### [UniProg](https://github.com/rhmtazad/UniProg)
+
+I built this desktop app with a Scrum team for a software engineering course. Students use its PyQt5 dashboard to manage their courses and plan their degree. [View the dashboard](https://github.com/rhmtazad/UniProg/blob/main/screenshots/dashboard.PNG)
