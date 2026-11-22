@@ -1,22 +1,253 @@
-name: Update Credly Badges
+name: Update Credly badges
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
+  schedule:
+    - cron: "17 4 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: credly-gallery-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
-  update-readme:
-    runs-on: ubuntu-latest
-
+  refresh:
+    if: github.ref_type == 'branch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Badges - Readme
-        uses: pemtajo/badge-readme@main
+      - name: Check out the latest branch revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ github.ref_name }}
+
+      - name: Install Pillow for the badge artwork
+        run: |
+          python3 -m pip install --quiet --only-binary=:all: --target "$RUNNER_TEMP/credly-pillow" "Pillow==13.0.0"
+
+      - name: Refresh the gallery from Credly
+        shell: python3 {0}
+        env:
           CREDLY_USER: rhmtazad
+          PYTHONPATH: ${{ runner.temp }}/credly-pillow
+        run: |
+          import hashlib
+          import json
+          import os
+          import re
+          import time
+          from collections import defaultdict
+          from concurrent.futures import ThreadPoolExecutor
+          from dataclasses import dataclass
+          from html import escape
+          from http.client import IncompleteRead
+          from io import BytesIO
+          from pathlib import Path
+          from tempfile import TemporaryDirectory
+          from urllib.parse import quote, urlsplit
+          from urllib.request import Request, urlopen
+          from uuid import UUID
+
+          from PIL import Image, ImageDraw, ImageFont, ImageOps
+
+          ASSETS = Path("assets/credly")
+          README = Path("README.md")
+          START, END = "<!--START_SECTION:badges-->", "<!--END_SECTION:badges-->"
+          USER = os.environ["CREDLY_USER"]
+
+          # Order, short captions, and program providers for the featured cards.
+          # The full index always uses the title and issuer supplied by Credly.
+          FEATURED = {
+              "Google IT Automation with Python Professional Certificate": ("Google", ("IT Automation", "with Python")),
+              "Google Cybersecurity Professional Certificate": ("Google", ("Cybersecurity",)),
+              "Google IT Support Professional Certificate": ("Google", ("IT Support",)),
+              "Google Data Analytics Professional Certificate": ("Google", ("Data Analytics",)),
+              "Python for Data Science and AI": ("IBM", ("Python for Data", "Science and AI")),
+              "Google UX Design Professional Certificate": ("Google", ("UX Design",)),
+          }
+
+
+          @dataclass(frozen=True)
+          class Badge:
+              award: str
+              title: str
+              issuer: str
+              issued: str
+              source: str
+
+              @property
+              def link(self):
+                  return f"https://www.credly.com/badges/{self.award}/public_url"
+
+              @property
+              def art(self):
+                  # Credly changes the image URL when the issuer replaces the artwork.
+                  key = hashlib.sha256(self.source.encode()).hexdigest()[:20]
+                  return f"art-{key}.png"
+
+
+          def download(url, accept):
+              request = Request(url, headers={"User-Agent": "GitHub-Profile-Credentials/1.0", "Accept": accept})
+              for attempt in range(3):
+                  try:
+                      with urlopen(request, timeout=25) as response:
+                          return response.read()
+                  except (OSError, IncompleteRead):
+                      if attempt == 2:
+                          raise
+                      time.sleep(2 ** attempt)
+
+
+          def public_badges():
+              url = f"https://www.credly.com/users/{quote(USER, safe='')}/badges.json?page="
+              first = json.loads(download(url + "1", "application/json"))
+              rows = list(first["data"])
+              meta = first["metadata"]
+              for page in range(2, int(meta["total_pages"]) + 1):
+                  rows.extend(json.loads(download(url + str(page), "application/json"))["data"])
+
+              ids = {row["id"] for row in rows}
+              if not ids or len(ids) != len(rows) or len(ids) != int(meta["total_count"]):
+                  raise ValueError("Credly returned an empty or incomplete collection. Keeping the published gallery.")
+
+              badges = []
+              for row in rows:
+                  if not row.get("public", True) or row.get("is_private_badge") or row.get("state", "accepted") != "accepted":
+                      continue
+                  template = row["badge_template"]
+                  entities = row["issuer"]["entities"]
+                  issuer = next((item for item in entities if item.get("primary")), entities[0])
+                  source = row.get("image_url") or template["image_url"]
+                  parsed = urlsplit(source)
+                  if parsed.scheme != "https" or parsed.hostname not in {"images.credly.com", "images.youracclaim.com"}:
+                      raise ValueError(f"Unexpected Credly image address for {row['id']}")
+                  badges.append(Badge(str(UUID(row["id"])), template["name"].strip(), issuer["entity"]["name"],
+                                      row.get("issued_at_date") or "", source))
+              if not badges:
+                  raise ValueError("No public, accepted badges found. Keeping the published gallery.")
+              return sorted(badges, key=lambda b: (b.issued, b.award), reverse=True)
+
+
+          def thumbnail(name, source, staging):
+              cached = ASSETS / name
+              if cached.is_file():
+                  try:
+                      with Image.open(cached) as image:
+                          image.verify()
+                      return cached
+                  except (OSError, SyntaxError, ValueError):
+                      pass
+              with Image.open(BytesIO(download(source, "image/*"))) as original:
+                  image = ImageOps.contain(original.convert("RGBA"), (240, 240), Image.Resampling.LANCZOS)
+              square = Image.new("RGBA", (240, 240))
+              square.alpha_composite(image, ((240 - image.width) // 2, (240 - image.height) // 2))
+              path = staging / name
+              square.save(path, optimize=True)
+              return path
+
+
+          def draw_card(art, provider, lines, destination):
+              # Draw at 3x for crisp text and badge artwork on high-density screens.
+              scale = 3
+              width, height = 228 * scale, 96 * scale
+              card = Image.new("RGBA", (width, height))
+              pen = ImageDraw.Draw(card)
+              pen.rounded_rectangle((3, 3, width - 4, height - 4), radius=9 * scale,
+                                    fill="#ffffff", outline="#d1d9e0", width=scale)
+              with Image.open(art) as image:
+                  icon = image.resize((68 * scale, 68 * scale), Image.Resampling.LANCZOS)
+                  card.alpha_composite(icon, (12 * scale, 14 * scale))
+              label = ImageFont.truetype("DejaVuSans.ttf", 12 * scale)
+              title = ImageFont.truetype("DejaVuSans-Bold.ttf", 14 * scale)
+              x = 89 * scale
+              y = (96 - (17 + len(lines) * 19)) * scale // 2
+              pen.text((x, y), provider, font=label, anchor="lt", fill="#59636e")
+              for index, line in enumerate(lines):
+                  pen.text((x, y + (18 + 19 * index) * scale), line, font=title, anchor="lt", fill="#1f2328")
+              card.save(destination, optimize=True)
+
+
+          def gallery(badges, images, staging):
+              # Keep the newest award for a featured program if Credly lists several versions.
+              by_title = {}
+              by_issuer = defaultdict(list)
+              for badge in badges:
+                  title = re.sub(r"\s*\(v\.\s*[\d.]+\)\s*$", "", badge.title, flags=re.I)
+                  by_title.setdefault(title, badge)
+                  by_issuer[badge.issuer].append(badge)
+
+              cards = []
+              files = set(images)
+              for name, (provider, lines) in FEATURED.items():
+                  badge = by_title.get(name)
+                  if badge is None:
+                      continue
+                  card = f"card-{badge.award}.png"
+                  draw_card(images[badge.art], provider, lines, staging / card)
+                  files.add(card)
+                  alt = escape(name if name.startswith(provider + " ") else f"{provider} — {name}")
+                  cards.append(f'  <a href="{badge.link}"><img src="{ASSETS}/{card}" width="228" height="96" alt="{alt}"></a>')
+
+              section = ['<p align="center">', *cards, "</p>", ""] if cards else []
+              section.extend(["<details>" if cards else "<details open>", f"<summary>Browse all {len(badges)} credentials</summary>", ""])
+              for issuer, awards in sorted(by_issuer.items()):
+                  section.extend([f"<h3>{escape(issuer)}</h3>", "<ul>"])
+                  for badge in sorted(awards, key=lambda b: (b.title.casefold(), b.award)):
+                      img = f'<img src="{ASSETS}/{badge.art}" width="32" height="32" align="middle" alt="">'
+                      section.append(f'  <li><a href="{badge.link}">{img} &nbsp;{escape(badge.title)}</a></li>')
+                  section.extend(["</ul>", ""])
+              section.append("</details>")
+              return "\n".join(section), files
+
+
+          def main():
+              original = README.read_bytes().decode("utf-8")
+              if original.count(START) != 1 or original.count(END) != 1 or original.index(START) > original.index(END):
+                  raise ValueError("README.md needs one ordered pair of badge markers.")
+              before, after = original.split(START)[0], original.split(END)[1]
+              newline = "\r\n" if "\r\n" in original else "\n"
+              badges = public_badges()
+              sources = {badge.art: badge.source for badge in badges}
+
+              with TemporaryDirectory(dir=".") as temp:
+                  staging = Path(temp)
+                  with ThreadPoolExecutor(max_workers=4) as pool:
+                      paths = pool.map(lambda item: thumbnail(*item, staging), sources.items())
+                      images = dict(zip(sources, paths))
+                  section, wanted = gallery(badges, images, staging)
+                  block = newline.join([START, "", section.replace("\n", newline), "", END])
+
+                  # Publish only after every page, thumbnail and featured card is ready.
+                  ASSETS.mkdir(parents=True, exist_ok=True)
+                  for new in staging.glob("*.png"):
+                      new.replace(ASSETS / new.name)
+                  (staging / "README.md").write_bytes((before + block + after).encode("utf-8"))
+                  (staging / "README.md").replace(README)
+                  generated = r"(?:art-[0-9a-f]{20}|card-[0-9a-f-]{36})\.png"
+                  for old in ASSETS.glob("*.png"):
+                      if re.fullmatch(generated, old.name) and old.name not in wanted:
+                          old.unlink()
+              print(f"Updated {len(badges)} credentials and {len(wanted) - len(images)} featured cards.")
+
+
+          if __name__ == "__main__":
+              main()
+
+      - name: Commit changed artwork and README together
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- README.md assets/credly
+          if git diff --cached --quiet; then
+            echo "The gallery is current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh Credly credential gallery"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"
