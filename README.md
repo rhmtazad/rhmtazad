@@ -8,17 +8,52 @@
 
 I build Python tools and automate infrastructure. I’m currently exploring how to deploy and secure Linux systems in the cloud.
 
+## Selected projects
+
+### [UniProg](https://github.com/rhmtazad/UniProg)
+
+**Python · PyQt5**
+
+I built this desktop app with a Scrum team for a software engineering course. Students use its PyQt5 dashboard to manage their courses and plan their degree. [View the dashboard](https://github.com/rhmtazad/UniProg/blob/main/screenshots/dashboard.PNG)
+
+<p align="center">
+  <img src="./assets/uniprog.PNG" width="720" alt="UniProg Software Dashboard">
+</p>
+
+### [HydraDB](https://github.com/rhmtazad/hydraDB)
+
+**Python · SQLite**
+
+HydraDB turns everyday SQLite operations into Python method calls. A single `Schema` object can create tables, change columns, and return query results as dictionaries. [Package on PyPI](https://pypi.org/project/hydradb/)
+
+<details>
+<summary>Try HydraDB</summary>
+
+```bash
+python -m pip install hydradb
+```
+
+```python
+from hydra import Schema
+
+db = Schema("portfolio")
+db.add_table("projects")
+print(db.fetch_column_names("projects"))  # ['projects_id']
+```
+
+</details>
+
 ## Credentials
 
 <!--START_SECTION:badges-->
 
 <p align="center">
-  <a href="https://www.credly.com/badges/fbec0f71-57c2-4800-8391-14a8465cb4fc/public_url"><img src="assets/credly/card-fbec0f71-57c2-4800-8391-14a8465cb4fc.png" width="228" height="96" alt="Google IT Automation with Python Professional Certificate"></a>
-  <a href="https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2/public_url"><img src="assets/credly/card-f77abbe0-72ab-4def-b801-172d73b398b2.png" width="228" height="96" alt="Google Cybersecurity Professional Certificate"></a>
-  <a href="https://www.credly.com/badges/58d74682-616e-4aef-be32-36e66150aec7/public_url"><img src="assets/credly/card-58d74682-616e-4aef-be32-36e66150aec7.png" width="228" height="96" alt="Google IT Support Professional Certificate"></a>
-  <a href="https://www.credly.com/badges/9b4d1e5c-be53-44e2-a1cd-c312502693ca/public_url"><img src="assets/credly/card-9b4d1e5c-be53-44e2-a1cd-c312502693ca.png" width="228" height="96" alt="Google Data Analytics Professional Certificate"></a>
-  <a href="https://www.credly.com/badges/e60e8e95-980a-46ae-9fc5-ed9c8fee80de/public_url"><img src="assets/credly/card-e60e8e95-980a-46ae-9fc5-ed9c8fee80de.png" width="228" height="96" alt="IBM — Python for Data Science and AI"></a>
-  <a href="https://www.credly.com/badges/e0e153c1-92ad-4643-8af2-414fb92736f2/public_url"><img src="assets/credly/card-e0e153c1-92ad-4643-8af2-414fb92736f2.png" width="228" height="96" alt="Google UX Design Professional Certificate"></a>
+  <a href="https://www.credly.com/badges/fbec0f71-57c2-4800-8391-14a8465cb4fc/public_url"><img src="assets/credly/card-fbec0f71-57c2-4800-8391-14a8465cb4fc.png" width="102" height="110" alt="Google IT Automation with Python Professional Certificate"></a>
+  <a href="https://www.credly.com/badges/f77abbe0-72ab-4def-b801-172d73b398b2/public_url"><img src="assets/credly/card-f77abbe0-72ab-4def-b801-172d73b398b2.png" width="102" height="110" alt="Google Cybersecurity Professional Certificate"></a>
+  <a href="https://www.credly.com/badges/58d74682-616e-4aef-be32-36e66150aec7/public_url"><img src="assets/credly/card-58d74682-616e-4aef-be32-36e66150aec7.png" width="102" height="110" alt="Google IT Support Professional Certificate"></a>
+  <a href="https://www.credly.com/badges/9b4d1e5c-be53-44e2-a1cd-c312502693ca/public_url"><img src="assets/credly/card-9b4d1e5c-be53-44e2-a1cd-c312502693ca.png" width="102" height="110" alt="Google Data Analytics Professional Certificate"></a>
+  <a href="https://www.credly.com/badges/e60e8e95-980a-46ae-9fc5-ed9c8fee80de/public_url"><img src="assets/credly/card-e60e8e95-980a-46ae-9fc5-ed9c8fee80de.png" width="102" height="110" alt="IBM — Python for Data Science and AI"></a>
+  <a href="https://www.credly.com/badges/e0e153c1-92ad-4643-8af2-414fb92736f2/public_url"><img src="assets/credly/card-e0e153c1-92ad-4643-8af2-414fb92736f2.png" width="102" height="110" alt="Google UX Design Professional Certificate"></a>
 </p>
 
 <details>
@@ -73,34 +108,3 @@ I build Python tools and automate infrastructure. I’m currently exploring how 
 <!--END_SECTION:badges-->
 
 [View my Credly profile →](https://www.credly.com/users/rhmtazad)
-
-## Selected projects
-
-### [HydraDB](https://github.com/rhmtazad/hydraDB)
-
-HydraDB turns everyday SQLite operations into Python method calls. A single `Schema` object can create tables, change columns, and return query results as dictionaries. [Package on PyPI](https://pypi.org/project/hydradb/)
-
-<details>
-<summary>Try HydraDB</summary>
-
-```bash
-python -m pip install hydradb
-```
-
-```python
-from hydra import Schema
-
-db = Schema("portfolio")
-db.add_table("projects")
-print(db.fetch_column_names("projects"))  # ['projects_id']
-```
-
-</details>
-
-### [UniProg](https://github.com/rhmtazad/UniProg)
-
-I built this desktop app with a Scrum team for a software engineering course. Students use its PyQt5 dashboard to manage their courses and plan their degree. [View the dashboard](https://github.com/rhmtazad/UniProg/blob/main/screenshots/dashboard.PNG)
-
-<p align="center">
-  <img src="./assets/uniprog.PNG" alt="UniProg Software Dashboard">
-</p>
