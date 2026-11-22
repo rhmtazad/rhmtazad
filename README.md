@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/hero.png" alt="Software Engineering · DevOps · Automation">
+</p>
+
 # Rahmat Azad
 
 **Software engineering & DevOps**
@@ -96,3 +100,7 @@ print(db.fetch_column_names("projects"))  # ['projects_id']
 ### [UniProg](https://github.com/rhmtazad/UniProg)
 
 I built this desktop app with a Scrum team for a software engineering course. Students use its PyQt5 dashboard to manage their courses and plan their degree. [View the dashboard](https://github.com/rhmtazad/UniProg/blob/main/screenshots/dashboard.PNG)
+
+<p align="center">
+  <img src="./assets/uniprog.PNG" alt="UniProg Software Dashboard">
+</p>
